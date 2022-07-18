@@ -1,15 +1,13 @@
-"""testsite URL Configuration
-
-__________________________________________                                                                       
-TESTSITE
-ПУТИ К СТРАНИЦАМ                                                                                                  
-_________________________________________
 """
-from django.contrib import admin
-from django.urls import path,include
+__________________________________________                                                                       
+TESTSITE/BLOG
+ПУТИ К СТРАНИЦАМ                                                                                                  
+________________________________________                                                                                          
+"""
+from django.urls import path 
+from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path("",include('blog.urls'))
+    
+    path("",views.home,name="home")
 ]
-
